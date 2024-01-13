@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+
+  BTCD:
+    container_name: BTCD
+    image: BTCDnetwork/BTCD:latest
+    restart: unless-stopped
+    ports:
+      - "42110:42110/tcp"
+      - "42111:42111/tcp"
+    volumes:
+      - $HOME/.BTCD:/app/data/
+# use managed volumes
+#      - BTCD:/app/data/
+    command:  ./BTCD --utxoindex --connect=mainnet-dnsseed-1.BTCDcoin.com --appdir=/app/data
