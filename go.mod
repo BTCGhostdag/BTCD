@@ -1,4 +1,4 @@
-module github.com/karlsen-network/karlsend
+module github.com/BTCGhostdag/BTCD
 
 go 1.18
 
